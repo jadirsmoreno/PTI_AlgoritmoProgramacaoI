@@ -1,0 +1,34 @@
+console.log('##############################')
+console.log('Bem vindo ao Programa Abastece')
+console.log('##############################\n')
+var consultar = prompt('Deseja realizar consulta de Compensação Programa Abastece?\n[1]Sim\n[2]Não\n')
+
+while (consultar == 1) {
+	
+	var etanol = parseFloat(prompt('Digite o valor do Etanol R$: '))
+	console.log(etanol)
+	var gasolina = parseFloat(prompt('Digite o valor do Gasolina R$: '))
+	console.log(gasolina)
+	var calculo = parseFloat(etanol / gasolina).toFixed(2)
+	console.log(calculo)
+	
+	if (calculo > 0.7) {
+        console.log('Relação valor Etanol x Gasolina = ', calculo)
+        console.log('O combustível que vale a pena é a Gasolina')
+    } 
+
+	else if (calculo < 0.7) {
+        console.log('Relação valor Etanol x Gasolina = ', calculo)
+        console.log('O combustível que vale a pena é a Etanol')
+    }
+	
+	else if (calculo == 0.7) {
+        console.log('Relação valor Etanol x Gasolina = ', calculo)
+        console.log('Com o valor de ', calculo, 'poderá abaster com Etanol ou Gasolina')
+    } 
+
+	var consultar = prompt('\nDeseja realizar uma nova consulta de Compensação Programa Abastece?\n[1]Sim\n[2]Não\n')
+}
+console.log('\n###########################################')
+console.log('Muito obrigado por usar o Programa Abastece')
+console.log('###########################################\n')
